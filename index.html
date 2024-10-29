@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recetas Cocina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Sofia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        header img{
+            position: absolute;
+            border-radius: 100%;
+            width: 120px;
+            height: 120px;
+            transform: scale(105%);
+            top: 3%;
+            left: 7%;
+        }
+        .menu{
+            position: fixed;
+            font-size: 35px;
+            top: 5%;
+            right: 2%;
+            /* background-color: rgba(240, 240, 240, .3);
+            border: 1px solid rgba(50, 50, 50, .8); */
+            padding: 0 2px;
+            display: flex;
+            justify-content: left;
+        }
+        .menu:hover{
+            transform: scale(110%);
+            color: #fff;
+            /* box-shadow: 3px 7px 18px 0px rgba(0,0,0,0.5); */
+        }
+        .redes{
+            display: none;
+            list-style: none;
+            position: absolute;
+            right: 2%;
+            top: auto;
+            font-size: 30px;
+            padding-left: 0;
+            padding-top: 20px;
+        }
+        .redes div:hover{
+            font-size: 40px;
+        }
+        .menu:hover  .redes{
+            display: block;
+            transform: scale(20px);
+        }
+
+        header{
+            text-decoration: underline;
+            background-color: #82bfa0;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+            font-family: Sofia;
+            font-size: 28px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+        .indice{
+            border-top:1px solid black;
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+            text-justify: inter-word;
+            background-image: url(fondo-indice.jpg);
+            background-repeat: no-repeat;
+            padding:10px;
+            background-position: center;
+            background-size: cover;
+        }
+        .indice img{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            left: 39%;
+            top:19%;
+        }
+        .indice div{
+            background-color: rgba(255, 255, 255, 0.85);
+            margin: 0;
+            display:flex;
+            justify-content: center;
+            border: 3px solid rgb(126, 83, 64);
+        }
+        .indice h2{
+            font-size: 30px;
+            position: absolute;
+        }
+        .indice ol{
+            font-weight: bold;
+            font-size: 25px;
+            font-family: 'Indie Flower';
+            margin-top: 65px;
+        }
+        .receta {
+            border-top: 3px dashed black;
+            padding: 10px;
+            margin-top: 0;
+        }
+        .paella{
+            background-color: #efe8b2;
+        }
+        .enchilada{
+            background-color: #fdf2c5;
+        }
+        .curry{
+            background-color: #efe8b2;
+        }
+        .sopa{
+            background-color: #fdf2c5;
+        }
+        .tiramisu{
+            background-color: #efe8b2;
+        }
+        .nombre{
+            font-size: 30px;
+        }
+        .receta .instrucciones{
+            font-size: 28px;
+            font-family: 'Indie Flower';
+            margin-left: 20px;
+        }
+        .receta li{
+            margin-left: 30px;
+            font-size: 18px;
+        }
+        ol li{
+            margin: 15px;
+        }
+        li span{
+            font-weight: bold;
+        }
+        .video{
+            float: right;
+            margin-right: 10%;
+            margin-top: 0;
+        }
+        .tiramisu .video{
+            float: right;
+            margin-top: -3%;
+        }
+        .curry .video{
+            float: right;
+            margin-top: -3%;
+        }
+        .sopa .video{
+            float: right;
+            margin-top: -3%;
+        }
+        .enchilada .video{
+            float: right;
+            margin-top: -3%;
+        }
+        footer{
+            border-top: 2px solid black;
+            display:grid;
+            background-color: #82bfa0;
+            padding: 15px;
+        }
+        footer p{
+            text-align: center;
+            font-size: small;
+        }
+        footer a{
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            border: 1px solid black;
+            padding: 8px;
+            background-color: rgba(240, 240, 240, .6);
+            text-align: center;
+        }
+        footer a:hover{
+            filter: brightness(70%);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+        
+            <i class="ri-menu-line"></i>
+                <ul class="redes">
+                    <div><li><a href="https://www.instagram.com/?hl=es" target="_blank"><i class="ri-instagram-fill"></i></a></li></div>
+                    <div><li><a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i class="ri-facebook-box-fill"></i></a></li></div>
+                    <div><li><a href="https://www.tiktok.com/es/" target="_blank"><i class="ri-tiktok-fill"></i></a></li></div>
+                    <div><li><a href="https://www.youtube.com/" target="_blank"><i class="ri-youtube-fill"></i></a></li></div>
+                    <div><li><a href="#"><i class="ri-home-9-fill"></i></a></li></div>
+                </ul>
+
+        </div>  
+
+    </nav>
+
+    <header id="inicio">
+            <img class="logotipo" src="logo.png" alt="logotipo">
+            <h1 style="cursor: default;">Recetas de Cocina</h1>
+    </header>
+
+    <nav class="indice">
+        <img src="chincheta.png" alt="chincheta">
+        <div>
+            <h2>ÍNDICE</h2>
+            <ol>
+                <a href="#paella"><li>Paella valenciana</li></a>
+                <a href="#enchiladas"><li>Enchiladas verdes</li></a>
+                <a href="#curry"><li>Curry de Pollo con Arroz Basmati</li></a>
+                <a href="#sopa"><li>Sopa de Ajo</li></a>
+                <a href="#tiramisu"><li>Tiramisú Clásico</li></a>
+            </ol>
+        </div>
+    </nav>
+
+    <section>
+        <article class="receta paella" id="paella">
+            <h2 class="nombre">1. Paella Valenciana</h2>
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/vWySIREExjo?si=PeXU2MlNbwdJZZDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="instrucciones">Ingredientes:</h2>
+            <ul>
+                <li>400g de arroz</li>
+                <li>800ml de caldo de pollo o pescado</li>
+                <li>200g de conejo troceado</li>
+                <li>200g de pollo troceado</li>
+                <li>150g de judía verde (ferraura)</li>
+                <li>100g de garrofón</li>
+                <li>2 tomates maduros</li>
+                <li>1 pimiento rojo</li>
+                <li>2 dientes de ajo</li>
+                <li>Aceite de oliva</li>
+                <li>Azafrán o colorante</li>
+                <li>Sal y pimienta</li>
+            </ul>
+            <h2 class="instrucciones">Preparación:</h2>
+            <ol>
+                <li><span>Preparar el sofrito: </span>En una paellera amplia, calienta aceite de oliva y dora los trozos de pollo y conejo hasta que estén dorados por todos lados. Retíralos y resérvalos.</li>
+                <li><span>Cocinar las verduras: </span>En el mismo aceite, añade las judías verdes y sofríelas hasta que estén tiernas. Añade el pimiento cortado en tiras, los ajos picados y el tomate rallado. Cocina todo junto hasta que el tomate se haya reducido.</li>
+                <li><span>Incorporar el arroz: </span>Añade el arroz a la paellera y mézclalo con el sofrito. A continuación, vuelve a incorporar la carne reservada.</li>
+                <li><span>Añadir el caldo: </span>Vierte el caldo caliente, asegurándote de que cubre todos los ingredientes. Añade el garrofón y el azafrán. Cocina a fuego medio durante 20 minutos sin remover, dejando que el arroz absorba todo el caldo.</li>
+                <li><span>Reposar y servir: </span>Vierte el caldo caliente, asegurándote de que cubre todos los ingredientes. Añade el garrofón y el azafrán. Cocina a fuego medio durante 20 minutos sin remover, dejando que el arroz absorba todo el caldo.</li>
+            </ol>
+        </article>
+        <article class="receta enchilada" id="enchiladas">
+            <h2 class="nombre">2. Enchiladas verdes</h2>
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/SiKY5Im2FGo?si=DpdPEQFfAyvm08Cg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="instrucciones">Ingredientes:</h2>
+            <ul>
+                <li>12 tortillas de maíz</li>
+                <li>500g de pechuga de pollo cocida y desmenuzada</li>
+                <li>400g de tomatillo</li>
+                <li>2 chiles serranos</li>
+                <li>1 diente de ajo</li>
+                <li>½ cebolla</li>
+                <li>200g de crema</li>
+                <li>200g de queso fresco desmenuzado</li>
+                <li>Aceite vegetal</li>
+                <li>Sal</li>
+            </ul>
+            <h2 class="instrucciones">Preparación:</h2>
+            <ol>
+                <li><span>Preparar la salsa: </span>Cocina los tomatillos y los chiles en agua hirviendo durante unos 5 minutos. Una vez cocidos, licúalos junto con la cebolla, el ajo y un poco de sal hasta obtener una salsa homogénea.</li>
+                <li><span>Freír las tortillas: </span>Calienta un poco de aceite en una sartén. Pasa rápidamente las tortillas por el aceite caliente para suavizarlas sin que se doren demasiado. Resérvalas.</li>
+                <li><span>Ensamblar las enchiladas: </span>Rellena cada tortilla con el pollo desmenuzado y enrolla. Coloca las enchiladas en un plato grande.</li>
+                <li><span>Servir: </span>Cubre las enchiladas con la salsa verde caliente, añade crema y queso fresco por encima. Sirve acompañadas de frijoles refritos o arroz.</li>
+            </ol>
+        </article>
+        <article class="receta curry" id="curry">
+            <h2 class="nombre">3. Curry de Pollo con Arroz Basmati</h2>
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/1nCwTErCes0?si=p0gOg8BrTKSbSAhO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="instrucciones">Ingredientes:</h2>
+            <ul>
+                <li>500g de pechuga de pollo</li>
+                <li>1 cebolla grande</li>
+                <li>2 dientes de ajo</li>
+                <li>1 trozo de jengibre fresco (2cm)</li>
+                <li>2 cucharadas de curry en polvo</li>
+                <li>400ml de leche de coco</li>
+                <li>300g de arroz basmati</li>
+                <li>Aceite vegetal</li>
+                <li>Sal y pimienta</li>
+            </ul>
+            <h2 class="instrucciones">Preparación:</h2>
+            <ol>
+                <li><span>Preparar los ingredientes: </span>Pica finamente la cebolla, el ajo y el jengibre. Corta el pollo en cubos medianos.</li>
+                <li><span>Sofreír el pollo: </span>En una sartén grande, calienta aceite y sofríe el pollo hasta que esté dorado. Retíralo y resérvalo.</li>
+                <li><span>Hacer la salsa: </span>En la misma sartén, añade la cebolla, el ajo y el jengibre. Cocina hasta que estén dorados. Añade el curry en polvo y mezcla bien. Incorpora la leche de coco y cocina a fuego lento durante 10 minutos.</li>
+                <li><span>Cocinar el arroz: </span>Mientras tanto, hierve el arroz basmati en agua con sal siguiendo las instrucciones del paquete.</li>
+                <li><span>Finalizar el curry: </span>Añade el pollo dorado a la salsa de curry y cocina todo junto unos 10 minutos más. Sirve el curry de pollo sobre el arroz basmati.</li>
+            </ol>
+        </article>
+        <article class="receta sopa" id="sopa">
+            <h2 class="nombre">4. Sopa de Ajo</h2>
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/sD0K5R2t9_U?si=KwcurRnluGxXlemo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="instrucciones">Ingredientes:</h2>
+            <ul>
+                <li>8 dientes de ajo</li>
+                <li>150g de pan duro (preferiblemente del día anterior)</li>
+                <li>1L de caldo de pollo</li>
+                <li>4 huevos</li>
+                <li>100g de jamón serrano en taquitos</li>
+                <li>1 cucharada de pimentón dulce</li>
+                <li>Aceite de oliva</li>
+                <li>Sal y pimienta</li>
+            </ul>
+            <h2 class="instrucciones">Preparación:</h2>
+            <ol>
+                <li><span>Preparar los ingredientes: </span>Pela los dientes de ajo y córtalos en láminas finas. Corta el pan en rebanadas finas o en trozos pequeños.</li>
+                <li><span>Freír el ajo: </span>En una cazuela grande, calienta un buen chorro de aceite de oliva y sofríe los ajos a fuego lento hasta que estén dorados, cuidando de que no se quemen, ya que esto podría amargar la sopa.</li>
+                <li><span>Añadir el pimentón y el pan: </span>Una vez dorados los ajos, añade el pimentón dulce y remueve rápidamente para que no se queme. Luego, agrega el pan y sofríelo junto al ajo durante unos minutos.</li>
+                <li><span>Incorporar el caldo: </span>Vierte el caldo de pollo caliente sobre la mezcla de ajo y pan. Cocina a fuego lento durante 15 minutos, dejando que el pan se deshaga parcialmente y la sopa espese ligeramente.</li>
+                <li><span>Añadir los huevos y el jamón: </span>Mientras la sopa sigue cocinándose, añade los taquitos de jamón serrano. Luego, rompe los huevos directamente sobre la sopa y cocina durante unos minutos más hasta que las claras se hayan cuajado, pero las yemas aún estén algo líquidas.</li>
+                <li><span>Servir: </span>Sirve la sopa bien caliente, con un poco de pimienta recién molida y, si se desea, un chorrito de aceite de oliva virgen extra. Es perfecta para días fríos o como entrante en una comida especial.</li>
+            </ol>
+        </article>
+        <article class="receta tiramisu" id="tiramisu">
+            <h2 class="nombre">5. Tiramisú Clásico</h2>
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/0tzcRwNMDPg?si=uBRNf65RPWF9UamZ&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 class="instrucciones">Ingredientes:</h2>
+            <ul>
+                <li>500g de queso mascarpone</li>
+                <li>4 huevos</li>
+                <li>100g de azúcar</li>
+                <li>200g de bizcochos de soletilla</li>
+                <li>1 taza de café fuerte</li>
+                <li>50ml de licor Amaretto</li>
+                <li>Cacao en polvo</li>
+            </ul>
+            <h2 class="instrucciones">Preparación:</h2>
+            <ol>
+                <li><span>Preparar la crema: </span>Separa las yemas de las claras. Bate las yemas con el azúcar hasta obtener una mezcla espumosa. Añade el queso mascarpone y mezcla suavemente.</li>
+                <li><span>Montar las claras: </span>Bate las claras a punto de nieve e incorpóralas con movimientos envolventes a la crema de mascarpone.</li>
+                <li><span>Montar el tiramisú: </span>Mezcla el café con el Amaretto. Moja los bizcochos en la mezcla y colócalos en la base de un molde. Cubre con una capa de crema de mascarpone. Repite hasta terminar con una capa de crema.</li>
+                <li><span>Refrigerar: </span>Deja el tiramisú en la nevera durante al menos 4 horas. Antes de servir, espolvorea con cacao en polvo.</li>
+            </ol>
+        </article>
+    </section>
+
+    <footer>
+        <a href="#inicio">Volver al inicio</a>
+        <p>© Ayur Sánchez Lozano</p>
+    </footer>
+
+</body>
+</html>
