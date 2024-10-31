@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Sofia&display=swap" rel="stylesheet">
+    <title>Recetas Cocina 1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            overflow-x: hidden; /* Elimina el desplazamiento horizontal */
+        }
+        .titulo{
+            background-color: rgba(255, 255, 255, .65);
+            backdrop-filter: blur(2px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid white;
+            margin: 0;
+            font-family: Sofia;
+            font-size: 50px;
+            color: #f2b3bf;
+            -webkit-text-stroke: 0.001px #F285A2;
+            text-decoration: 6px underline;
+            transition: box-shadow 500ms ease-out, backdrop-filter 400ms ease-in-out;
+        }
+        .titulo:hover{
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 20px 5px white;
+        }
+        h1{
+            transition: text-shadow 400ms ease-out;
+        }
+        .titulo:hover h1{
+            cursor: default;
+            text-shadow: 1px 2px #000;
+        }
+        header img{
+            border: 2px solid black;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            left: 8%;
+            position: absolute;
+            box-shadow: 0 0 15px 10px #d8ba83;
+        }
+        header{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 690px;
+            text-align: center;
+            background-image: url(fondo-cocina.jpg);
+            background-repeat: no-repeat;
+            background-position: top;
+            margin-top: 0;
+            border-bottom: 3px dashed black;
+        }
+
+        /* ------------------------------------------------------------------- */
+        section{
+            background-color: #efe8b2;
+        }
+        h2{
+            padding: 5px 10px; /* Ampliar padding horizontal */
+            display: inline-block; /* Ajusta el ancho al contenido */
+            margin: 0;
+            font-family: 'Indie Flower';
+            font-size: 30px;
+            color: #3c6953;
+            background-color: rgba(242, 179, 191, .7);
+        }
+        p{
+            margin: 25px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .divreceta{
+            padding-top: 10px;
+            display: block;
+            width: 40%; /* Hacerlo más amplio en lugar de 35% */
+            margin: 0;
+            backdrop-filter: blur(2px);
+            background-color: rgba(239, 232, 178, .5);
+            padding: 15px; /* Espaciado interno */
+            height: 100%;
+        }
+        .receta{
+            text-align: center;
+            width: 100%; 
+            transition: scale 500ms ease-in;
+        }
+        .paella, .enchilada, .curry, .sopa, .tiramisu{
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .paella { background-image: url(paella-valenciana.jpg); background-position: left;margin-bottom: 30px; }
+        .enchilada { background-image: url(enchiladas.jpg); background-position: right;margin-bottom: 30px; }
+        .curry { background-image: url(curry.jpg); background-position: right;margin-bottom: 30px; }
+        .sopa { background-image: url(sopa.jpg); background-position: center;margin-bottom: 30px; }
+        .tiramisu { background-image: url(tiramisu.jpg); background-position: left; }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+                    /* LOS BOTONES Y LAS ANIMACIONES DE CADA ARTÍCULO */
+
+        button {
+            position: absolute;
+            right: 25%;
+            margin-top: 100px;
+            background-color: rgba(242, 133, 162, .7);
+            padding: 10px;
+            font-size: 25px;
+            font-family: Sofia;
+            border-radius: 35px;
+            opacity: 0; 
+            transition: padding 800ms ease-in, background-color 800ms ease-in, opacity 300ms ease-in;
+        }
+
+        button:hover {
+            cursor: pointer;
+            padding: 20px;
+            box-shadow: 0 0 15px 10px #cd60ff;
+            background-color: rgba(242, 133, 162, 1);
+        }
+        .receta:hover{
+            scale: 1.05;
+        }
+        .paella:hover .uno,
+        .enchilada:hover .dos,
+        .curry:hover .tres,
+        .sopa:hover .cuatro,
+        .tiramisu:hover .cinco {
+            opacity: 1;
+        }
+
+
+        /* ------------------------------------------------------------------- */
+        footer{
+            border-top: 2px solid black;
+            display: grid;
+            background-color: #82bfa0;
+            padding: 15px;
+        }
+        footer p{
+            text-align: center;
+            font-size: small;
+        }
+        footer a{
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            border: 1px solid black;
+            padding: 8px;
+            background-color: rgba(240, 240, 240, .6);
+            text-align: center;
+        }
+        footer a:hover{
+            filter: brightness(70%);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="inicio">
+        <img src="logo.png" alt="logo">
+        <div class="titulo">
+            <h1>Recetas de cocina</h1> <!--ENCABEZADO-->
+        </div>
+    </header>
+
+    <!-- ---------------------------------------------------------------- -->
+    <section>
+        <article class="receta paella">
+            <a href="principal.html"><button type="button" class="uno">Descubrir</button></a>
+            <div class="divreceta">
+                <h2>Paella Valenciana</h2> <!--PAELLA-->
+                <p>La paella valenciana es un festín de sabores mediterráneos, una joya culinaria que combina arroz dorado, pollo, conejo y vegetales frescos, cocinados a fuego lento sobre brasas. Con cada bocado, descubre el sabor auténtico de Valencia: natural, tradicional y lleno de pasión. ¡Perfecta para compartir y celebrar en cualquier ocasión!</p>
+            </div>
+        </article>
+        <article class="receta enchilada">
+            <a href="principal.html"><button type="button" class="dos">Descubrir</button></a>
+            <div class="divreceta">
+                <h2>Enchiladas Verdes</h2> <!--ENCHILADA-->
+                <p>Las enchiladas verdes son una explosión de sabores mexicanos: tortillas rellenas de pollo, cubiertas con salsa de tomatillo y crema, coronadas con queso fresco y cebolla. ¡Perfectas para disfrutar la auténtica cocina mexicana en cada bocado!</p>
+            </div>
+        </article>
+        <article class="receta curry">
+            <a href="principal.html"><button type="button" class="tres">Descubrir</button></a>
+            <div class="divreceta">
+                <h2>Curry de Pollo con Arroz Basmati</h2> <!--CURRY-->
+                <p>Este curry de pollo es una experiencia de aromas y sabores intensos: tiernas piezas de pollo en una cremosa salsa especiada, acompañadas de arroz basmati esponjoso. Un plato exótico y reconfortante, lleno de esencia india.</p>
+            </div>
+        </article>
+        <article class="receta sopa">
+            <a href="principal.html"><button type="button" class="cuatro">Descubrir</button></a>
+            <div class="divreceta">
+                <h2>Sopa de Ajo</h2> <!--SOPA-->
+                <p>La sopa de ajo es un plato rústico y reconfortante, donde el ajo se combina con pan tostado y un huevo poché, creando una mezcla cálida y sabrosa. Ideal para disfrutar en días fríos, con el auténtico sabor de la cocina tradicional.</p>
+            </div>
+        </article>
+        <article class="receta tiramisu">
+            <a href="principal.html"><button type="button" class="cinco">Descubrir</button></a>
+            <div class="divreceta">
+                <h2>Tiramisú Clásico</h2> <!--TIRAMISÚ-->
+                <p>El tiramisú clásico es un postre italiano inigualable: capas de suave mascarpone, bizcochos empapados en café y un toque de cacao en polvo. Elegante, cremoso y con el equilibrio perfecto entre dulce y amargo. ¡Un placer para el paladar!</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- ---------------------------------------------------------------- -->
+    <footer>
+        <a href="#inicio">Volver al inicio</a> <!--PIE DE PÁGINA-->
+        <p>© Ayur Sánchez Lozano, ∞</p>
+    </footer>
+</body>
+</html>
